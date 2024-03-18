@@ -18,22 +18,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Shubham Vandara | Crafting Exquisite Websites & Web Apps</title>
+    <title>Front End Developer & Website Designer - Shubham Vandara</title>
     <!-- META TAGS -->
+    <link rel="canonical" href="https://shubhamvandara.netlify.app/" />
     <meta
       name="description"
-      content="Explore Shubham Vandara portfolio skilled Frontend Developer for stunning, responsive web experiences. Let's make your digital dreams a reality!"
+      content="Shubham Vandara - Skilled front-end developer & website designer crafting user-friendly & visually appealing web experiences. Contact me today."
+    />
+    <meta
+      name="robots"
+      content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
     />
     <meta name="author" content="Shubham Vandara" />
     <meta
       property="og:title"
-      content="Shubham Vandara | Crafting Exquisite Websites & Web Apps"
+      content="Front End Developer & Website Designer - Shubham Vandara"
     />
     <meta property="og:site_name" content="Shubham Vandara Portfolio Website" />
     <meta property="og:url" content="https://shubhamvandara.netlify.app/" />
     <meta
       property="og:description"
-      content="A web developer specializing in frontend development, constructing the user interface and experience for websites and web applications."
+      content="Shubham Vandara - Skilled front-end developer & website designer crafting user-friendly & visually appealing web experiences. Contact me today."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -49,14 +54,19 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
 
     <!-- SLICK CSS LINK -->
     <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
-    />
+
+    <!-- ANIMATE ON SCROLL LINK -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- EXTERNAL STYLE SHEEET -->
     <link rel="stylesheet" href="css/style.css" />
-
     <!-- GOOGLE SITE VERIFICATION -->
     <meta
       name="google-site-verification"
@@ -77,7 +87,6 @@
               class="header__logo-img"
             />
           </div>
-          <span class="header__logo-sub">Shubham Vandara</span>
         </div>
         <div class="header__main">
           <ul class="header__links">
@@ -132,13 +141,9 @@
     </header>
 
     <!-- HERO SECTION -->
-
     <section class="home-hero" id="home">
       <div class="home-hero__content">
-        <h1 class="heading-primary">
-          Hi, My name is<br />
-          <span>Shubham Vandara</span>
-        </h1>
+        <h1 class="heading-primary">Shubham Vandara</h1>
         <div class="typed-container">
           <span id="auto-type"></span>
         </div>
@@ -148,7 +153,7 @@
           </p>
         </div>
         <div class="home-hero__cta">
-          <a href="./#projects" class="btn btn--bg">Projects</a>
+          <a href="./#projects" class="btn btn--bg btn--theme">Projects</a>
           <!-- <a href="" class="btn btn--bg" download>Resume</a> -->
         </div>
       </div>
@@ -241,7 +246,11 @@
 
     <section id="about" class="about sec-pad">
       <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
+        <h2
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          class="heading heading-sec heading-sec__mb-med"
+        >
           <span class="heading-sec__main">About Me</span>
           <span class="heading-sec__sub">
             Explore detailed insights into my profile, showcasing my expertise
@@ -250,42 +259,57 @@
           </span>
         </h2>
         <div class="about__content">
-          <div class="about__content-main">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            class="about__content-main"
+          >
             <h3 class="about__content-title">Get to know me!</h3>
             <div class="about__content-details">
               <p class="about__content-details-para">
-                Hey everyone! 👋 I'm all about creating awesome websites and web
-                apps as a <strong> Frontend Web Developer </strong> located in
-                Bangalore. Check out some of my cool
-                <strong> Projects </strong> in the Project section!
+                Hi there! I'm Shubham Vandara, a passionate Front-End Developer
+                and Website Designer based in Bangalore, India.
               </p>
               <p class="about__content-details-para">
-                Besides coding, I enjoy sharing the insights I've gathered on my
-                <strong>Web Development </strong> journey. Join me on
-                <strong>
-                  <a
-                    rel="noreferrer"
-                    href="https://t.me/web_development_resources"
-                    target="_blank"
-                    >Telegram</a
-                  >
-                </strong>
-                for some insightful content on all things Web Dev and
-                Programming.
+                I specialize in developing visually appealing and user-friendly
+                websites and web applications that provide exceptional digital
+                experiences. My area of expertise is using HTML, CSS, and
+                JavaScript to create modern and responsive websites that cater
+                to diverse user needs.
               </p>
               <p class="about__content-details-para">
-                I am open to get a new job opportunity where I can keep learning
-                and grow professionally, <strong>Contact </strong> me. I'm all
-                about making meaningful contributions and taking my skills to
-                the next level. 🚀 Let's connect and make things happen!
+                I believe in continuous learning and knowledge sharing. Looking
+                to expand my skills and connect with the developer community, I
+                share insights on web development and programming through my
+                <a
+                  rel="noreferrer"
+                  href="https://t.me/web_development_resources"
+                  target="_blank"
+                >
+                  Telegram
+                </a>
+                channel and collaborate on new projects.
               </p>
+              <p class="about__content-details-para">
+                I am actively seeking new and challenging opportunities where I
+                can contribute my skills, learn continuously, and collaborate
+                with a team. If you are in search of a skilled and motivated
+                Front-End Developer who is passionate about crafting exceptional
+                web experiences, let's get in touch! You can reach me through
+                the contact form or my social media platforms.
+              </p>
+              <p class="about__content-details-para">Thank you.</p>
             </div>
             <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
               >Contact</a
             >
           </div>
 
-          <div class="about__content-skills">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            class="about__content-skills"
+          >
             <h3 class="about__content-title">My Skills</h3>
             <div class="skills">
               <div class="skills__skill">HTML</div>
@@ -295,6 +319,7 @@
               <div class="skills__skill">JavaScript</div>
               <div class="skills__skill">jQuery</div>
               <div class="skills__skill">React</div>
+              <div class="skills__skill">Node</div>
               <div class="skills__skill">Java</div>
               <div class="skills__skill">My SQL</div>
               <div class="skills__skill">GIT</div>
@@ -312,7 +337,11 @@
 
     <section id="projects" class="projects sec-pad">
       <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-bg">
+        <h2
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          class="heading heading-sec heading-sec__mb-bg"
+        >
           <span class="heading-sec__main">Projects</span>
           <span class="heading-sec__sub">
             Check out some cool projects I've worked on my personal projects.
@@ -341,14 +370,14 @@
                   target="_blank"
                   href="https://shubham-vandara.github.io/Calculator/"
                   class="live-link"
-                  >Live Link</a
-                >
+                  >Live Link
+                </a>
                 <a
                   target="_blank"
                   href="https://github.com/Shubham-Vandara/Calculator/blob/main/index.html"
                   class="code-link"
-                  >Code Link</a
-                >
+                  >Code Link
+                </a>
               </div>
             </div>
           </div>
@@ -369,14 +398,14 @@
                   target="_blank"
                   href="https://shubham-vandara.github.io/Digital-Clock/"
                   class="live-link"
-                  >Live Link</a
-                >
+                  >Live Link
+                </a>
                 <a
                   target="_blank"
                   href="https://github.com/Shubham-Vandara/Digital-Clock/blob/main/index.html"
                   class="code-link"
-                  >Code Link</a
-                >
+                  >Code Link
+                </a>
               </div>
             </div>
           </div>
@@ -398,14 +427,14 @@
                   target="_blank"
                   href="https://shubham-vandara.github.io/Password-Generator/"
                   class="live-link"
-                  >Live Link</a
-                >
+                  >Live Link
+                </a>
                 <a
                   target="_blank"
                   href="https://github.com/Shubham-Vandara/Password-Generator/blob/main/index.html"
                   class="code-link"
-                  >Code Link</a
-                >
+                  >Code Link
+                </a>
               </div>
             </div>
           </div>
@@ -427,14 +456,14 @@
                   target="_blank"
                   href="https://shubham-vandara.github.io/Health-Pro/"
                   class="live-link"
-                  >Live Link</a
-                >
+                  >Live Link
+                </a>
                 <a
                   target="_blank"
                   href="https://github.com/Shubham-Vandara/Health-Pro/blob/main/index.html"
                   class="code-link"
-                  >Code Link</a
-                >
+                  >Code Link
+                </a>
               </div>
             </div>
           </div>
@@ -456,14 +485,14 @@
                   target="_blank"
                   href="https://shubham-vandara.github.io/Random-Color/"
                   class="live-link"
-                  >Live Link</a
-                >
+                  >Live Link
+                </a>
                 <a
                   target="_blank"
                   href="https://github.com/Shubham-Vandara/Random-Color/blob/main/index.html"
                   class="code-link"
-                  >Code Link</a
-                >
+                  >Code Link
+                </a>
               </div>
             </div>
           </div>
@@ -485,14 +514,14 @@
                   target="_blank"
                   href="https://shubham-vandara.github.io/Portfolio-John/"
                   class="live-link"
-                  >Live Link</a
-                >
+                  >Live Link
+                </a>
                 <a
                   target="_blank"
                   href="https://github.com/Shubham-Vandara/Portfolio-John/blob/main/index.html"
                   class="code-link"
-                  >Code Link</a
-                >
+                  >Code Link
+                </a>
               </div>
             </div>
           </div>
@@ -515,14 +544,14 @@
                   target="_blank"
                   href="https://shubham-vandara.github.io/StudySync/"
                   class="live-link"
-                  >Live Link</a
-                >
+                  >Live Link
+                </a>
                 <a
                   target="_blank"
                   href="https://github.com/Shubham-Vandara/StudySync/blob/main/index.html"
                   class="code-link"
-                  >Code Link</a
-                >
+                  >Code Link
+                </a>
               </div>
             </div>
           </div>
@@ -544,14 +573,14 @@
                   target="_blank"
                   href="https://shubham-vandara.github.io/Swipe/"
                   class="live-link"
-                  >Live Link</a
-                >
+                  >Live Link
+                </a>
                 <a
                   target="_blank"
                   href="https://github.com/Shubham-Vandara/Swipe/blob/master/index.html"
                   class="code-link"
-                  >Code Link</a
-                >
+                  >Code Link
+                </a>
               </div>
             </div>
           </div>
@@ -574,14 +603,14 @@
                   target="_blank"
                   href="https://shubham-vandara.github.io/Weather-Data/"
                   class="live-link"
-                  >Live Link</a
-                >
+                  >Live Link
+                </a>
                 <a
                   target="_blank"
                   href="https://github.com/Shubham-Vandara/Weather-Data/blob/main/index.html"
                   class="code-link"
-                  >Code Link</a
-                >
+                  >Code Link
+                </a>
               </div>
             </div>
           </div>
@@ -593,7 +622,11 @@
 
     <section id="contact" class="contact sec-pad dynamicBg">
       <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
+        <h2
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          class="heading heading-sec heading-sec__mb-med"
+        >
           <span class="heading-sec__main heading-sec__main--lt">Contact</span>
           <span class="heading-sec__sub heading-sec__sub--lt">
             Let's connect! Feel free to drop me a message – whether it's about a
@@ -649,7 +682,11 @@
     <footer class="main-footer">
       <div class="main-container">
         <div class="main-footer__upper">
-          <div class="main-footer__row main-footer__row-1">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            class="main-footer__row main-footer__row-1"
+          >
             <h2 class="heading heading-sm main-footer__heading-sm">
               <span>Social</span>
             </h2>
@@ -728,7 +765,11 @@
               </a>
             </div>
           </div>
-          <div class="main-footer__row main-footer__row-2">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            class="main-footer__row main-footer__row-2"
+          >
             <h4 class="heading heading-sm text-lt">Shubham Vandara</h4>
             <p class="main-footer__short-desc">
               Elevating User Experiences Through Innovative Frontend Development
@@ -736,10 +777,14 @@
           </div>
         </div>
         <div class="main-footer__lower">
-          &copy; 2024 Shubham Vandara. All Rights Reserved. Made with ❤️
+          &copy; 2024 Shubham Vandara. All Rights Reserved.
         </div>
       </div>
     </footer>
+
+    <div data-aos="zoom-in" data-aos-duration="1000" id="up-arrow">
+      <img src="./assets/svg/Up-arrow.svg" alt="up-arrow" />
+    </div>
 
     <!-- JQUERY LINK -->
     <script
@@ -756,6 +801,11 @@
     <!-- https://github.com/mattboldt/typed.js -->
     <!-- TYPES JS CDN -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- ANIMATE ON SCROLL LINK -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- EXTERNAL JS SCRIPT FILE -->
     <script src="./JS/index.js"></script>
   </body>
