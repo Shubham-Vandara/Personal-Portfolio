@@ -62,6 +62,7 @@ $(document).on("ready", function () {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          autoplay: false,
         },
       },
       // You can unslick at a given breakpoint now by adding:
@@ -74,10 +75,11 @@ $(document).on("ready", function () {
 // TYPED JS CODE
 var typed = new Typed("#auto-type", {
   strings: [
-    "Website Development",
-    "Frontend Development",
-    "User-Friendly Website Design",
-    "Custom Website Design",
+    "Programmer",
+    "Web-Developer",
+    "Frontend-Developer",
+    "Web-Designer",
+    "SEO Executive",
   ],
   typeSpeed: 100,
   backSpeed: 50,
@@ -85,41 +87,3 @@ var typed = new Typed("#auto-type", {
   loop: true,
   showCursor: true,
 });
-
-// SCROLL TOP FUNCTIONALITY
-
-// Select the scroll-to-top button element
-const scrollToTop = document.querySelector("#up-arrow");
-
-// Add an event listener for the scroll event on the window
-window.onscroll = function () {
-  // Call the scrollFunction when the user scrolls
-  scrollFunction();
-};
-
-// Hide the scroll-to-top button initially
-scrollToTop.style.display = "none";
-
-// Define the scrollFunction
-function scrollFunction() {
-  // If the user has scrolled down more than 50 pixels
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    // Display the scroll-to-top button
-    scrollToTop.style.display = "flex";
-    // Apply a smooth transition effect
-    scrollToTop.style.transition = "1s";
-  } else {
-    // If not scrolled enough, hide the button
-    scrollToTop.style.display = "none";
-  }
-}
-
-// Add a click event listener to the scroll-to-top button
-scrollToTop.addEventListener("click", topFunction);
-
-// Define the topFunction
-function topFunction() {
-  // Scroll the page back to the top
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
-}
