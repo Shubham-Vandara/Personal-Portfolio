@@ -635,46 +635,58 @@
             potential collaboration, a project idea, or just to say hello.
           </span>
         </h2>
-        <div class="contact__form-container">
-          <form action="#" class="contact__form">
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="name">Name</label>
-              <input
-                required
-                placeholder="Enter Your Name"
-                type="text"
-                class="contact__form-input"
-                name="name"
-                id="name"
+        <div class="container">
+          <div class="contact-container">
+            <div class="contact-form">
+              <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                  required
+                /><br />
+
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                /><br />
+
+                <label for="phone">Phone Number:</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Phone Number"
+                  required
+                /><br />
+
+                <label for="message">Message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Message..."
+                  rows="5"
+                  required
+                ></textarea
+                ><br />
+                <button class="btn btn--med btn--theme" type="button">
+                  Submit
+                </button>
+              </form>
+            </div>
+            <div class="contact-image">
+              <img
+                src="https://img.freepik.com/free-vector/contact-us-concept-illustration_114360-2299.jpg?t=st=1710866381~exp=171gi0869981~hmac=db1a633181bc8e24a42523c9cbc3bdb5059042e98a661af02a1aa79a48e92e50&w=740"
+                alt="Contact"
               />
             </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="email">Email</label>
-              <input
-                required
-                placeholder="Enter Your Email"
-                type="text"
-                class="contact__form-input"
-                name="email"
-                id="email"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="message">Message</label>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                class="contact__form-input"
-                placeholder="Enter Your Message"
-                name="message"
-                id="message"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn--theme contact__btn">
-              Submit
-            </button>
-          </form>
+          </div>
         </div>
       </div>
     </section>
