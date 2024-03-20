@@ -635,56 +635,54 @@
             potential collaboration, a project idea, or just to say hello.
           </span>
         </h2>
-        <div class="container">
+        <div class="main-container">
           <div class="contact-container">
             <div class="contact-form">
-              <form action="#" method="post">
-                <label for="name">Name:</label>
+              <form name="submit-to-google-sheet">
+                <label for="name">Name</label>
                 <input
                   type="text"
                   id="name"
-                  name="name"
-                  placeholder="Name"
+                  name="Name"
+                  placeholder="Enter Your Name"
                   required
                 /><br />
 
-                <label for="email">Email:</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  required
-                /><br />
-
-                <label for="phone">Phone Number:</label>
+                <label for="phone">Phone Number</label>
                 <input
                   type="tel"
                   id="phone"
-                  name="phone"
-                  placeholder="Phone Number"
+                  name="Phone"
+                  placeholder="Enter Phone Number"
                   required
                 /><br />
 
-                <label for="message">Message:</label>
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="Email"
+                  placeholder="Enter Your Email"
+                  required
+                /><br />
+
+                <label for="message">Message</label>
                 <textarea
                   id="message"
-                  name="message"
-                  placeholder="Message..."
+                  name="Message"
+                  placeholder="Enter Your Message"
                   rows="5"
                   required
                 ></textarea
                 ><br />
-                <button class="btn btn--med btn--theme" type="button">
+                <button type="submit" class="btn btn--med btn--theme">
                   Submit
                 </button>
+                <span id="submit-msg"></span>
               </form>
             </div>
             <div class="contact-image">
-              <img
-                src="https://img.freepik.com/free-vector/contact-us-concept-illustration_114360-2299.jpg?t=st=1710866381~exp=171gi0869981~hmac=db1a633181bc8e24a42523c9cbc3bdb5059042e98a661af02a1aa79a48e92e50&w=740"
-                alt="Contact"
-              />
+              <img src="assets/png/contact-us.jpg" alt="Contact" />
             </div>
           </div>
         </div>
@@ -823,6 +821,28 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <!-- FORM TO GOOGLE SHEETS -->
+    <!-- https://github.com/jamiewilson/form-to-google-sheets -->
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwmi-1gsRbIMiQlT1_bvCIZ8nvflnb0KE3N6RfUoltvCO5urOa2IQmxSnwkaw9aDRaH/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.querySelector("#submit-msg");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.style.display = "block";
+            msg.innerHTML = "Message Sent Succesfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+              msg.style.display = "none";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
     </script>
     <!-- EXTERNAL JS SCRIPT FILE -->
     <script src="./JS/index.js"></script>
