@@ -16,7 +16,7 @@ Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only
     --btn-bg-color: #1D6AEF;
     --btn-bg-hover: #1D6AEF;
     --link-color: #1D6AEF;
-    --gradient: linear-gradient(to right, rgba(12, 52, 131, 0.7) 0%, rgba(12, 52, 131, 0.7) 100%), url(../../assets/svg/common-bg.svg);
+    --gradient: linear-gradient(to right, rgba(12, 52, 131, 0.7) 0%, rgba(12, 52, 131, 0.7) 100%), url(../assets/svg/common-bg.svg);
     --white: #fff;
     --black: #000;
 }
