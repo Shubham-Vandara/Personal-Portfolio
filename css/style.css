@@ -64,7 +64,7 @@ body {
     line-height: 1.5;
     overflow-x: hidden;
     overflow-y: scroll;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Heebo', sans-serif;
 }
 
 a {
@@ -283,12 +283,12 @@ textarea {
 }
 
 .hero-section .content .title {
-    font-size: 44px;
+    font-size: 4rem;
 }
 
 .hero-section .content .subtitle {
-    font-size: 16px;
-    margin: 40px 0;
+    font-size: 2rem;
+    margin: 3rem 0px;
 }
 
 .hero-section .image-box {
@@ -324,11 +324,12 @@ textarea {
     }
 
     .hero-section .content .title {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .hero-section .content .subtitle {
-        margin: 2rem 0;
+        margin: 1.5rem 0;
+        font-size: 1.5rem;
     }
 
     .hero-section .image-box .image-container {
@@ -514,7 +515,8 @@ textarea {
 .contact-form {
     flex: 1 1 300px;
     padding: 20px;
-    border-radius: 0 10px 10px 0;
+    border-radius: 10px 0px 0px 10px;
+    background: #f4f4f4;
 }
 
 .contact-form h2 {
@@ -524,12 +526,10 @@ textarea {
 }
 
 .contact-form label {
-    font-weight: bold;
-    color: #666;
+    font-weight: 500;
     font-size: 1.6rem;
     display: block;
     padding-bottom: 10px;
-    letter-spacing: 1px;
 }
 
 .contact-form input[type="text"],
@@ -538,25 +538,11 @@ textarea {
 .contact-form textarea {
     width: 100%;
     padding: 15px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 10px;
-    border: 1px solid #ebebeb;
+    border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    background: #f0f0f0;
-}
-
-.contact-form input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-form input[type="submit"]:hover {
-    background-color: #0056b3;
 }
 
 .contact-form span#submit-msg {
@@ -601,19 +587,18 @@ textarea {
     z-index: 1000;
     background: var(--white);
     box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
-    font-family: "Poppins";
 }
 
 .header__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 5rem;
+    padding: 1rem 0rem;
 }
 
 @media only screen and (max-width: 56.25em) {
     .header__content {
-        padding: 0 2rem;
+        padding: 0;
     }
 }
 
@@ -656,6 +641,8 @@ textarea {
 
 .header__links {
     display: flex;
+    gap: 4rem;
+    padding: 2.2rem 0;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -665,13 +652,12 @@ textarea {
 }
 
 .header__link {
-    padding: 2.2rem 3rem;
     display: inline-block;
     font-size: 1.7rem;
-    color: #333;
+    color: var(--black);
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 700;
     transition: color .3s;
 }
 
@@ -733,7 +719,7 @@ textarea {
 .header__sm-menu-link a {
     display: block;
     text-decoration: none;
-    padding: 2.5rem 3rem;
+    padding: 2.5rem 2rem;
     font-size: 1.5rem;
     color: #333;
     text-align: right;
@@ -805,7 +791,7 @@ textarea {
 
 .main-footer__short-desc {
     margin-top: 2rem;
-    color: #eee;
+    color: var(--white);
     font-size: 1.6rem;
     line-height: 1.7;
 }
@@ -841,7 +827,7 @@ textarea {
 .main-footer__lower {
     padding: 3rem 0;
     border-top: 1px solid #444;
-    color: #eee;
+    color: var(--white);
     font-size: 1.6rem;
     text-align: center;
 }
