@@ -271,6 +271,93 @@ textarea {
 
 /* HOME SECTION */
 
+.hero-section {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-section .content {
+    flex: 2;
+}
+
+.hero-section .content .title {
+    font-size: 44px;
+}
+
+.hero-section .content .subtitle {
+    font-size: 16px;
+    margin: 40px 0;
+}
+
+.hero-section .image-box {
+    flex: 1.5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-section .image-box .image-container {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: blue;
+}
+
+.hero-section .image-box .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 10rem 0 2rem 0;
+    }
+
+    .hero-section .content {
+        order: 1;
+        text-align: center;
+    }
+
+    .hero-section .content .title {
+        font-size: 3rem;
+    }
+
+    .hero-section .content .subtitle {
+        margin: 2rem 0;
+    }
+
+    .hero-section .image-box .image-container {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Define the keyframes for the pulsating animation */
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply the animation to the image */
+.animated-image {
+    animation: pulsate 5s ease-in-out infinite;
+}
+
+
 .home-hero {
     color: var(--white);
     background: var(--gradient);
@@ -287,7 +374,7 @@ textarea {
     transform: translateY(-50%);
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 82em) {
     .home-hero__socials {
         display: none;
     }
@@ -329,24 +416,6 @@ textarea {
 
 .home-hero__social-icon {
     width: 100%;
-}
-
-.home-hero__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 90rem;
-    width: 92%;
-}
-
-@media only screen and (max-width: 37.5em) {
-    .home-hero__content {
-        padding: 25rem 0 13rem 0;
-        margin: auto;
-        position: static;
-        transform: translate(0, 0);
-    }
 }
 
 .home-hero__info {
@@ -890,12 +959,14 @@ textarea {
     overflow: hidden;
     border-radius: 5px;
     height: 250px;
+    width: 100%;
 }
 
 .slider .project-container .image-container img {
     width: 100%;
-    transition: all 0.5s;
     height: 100%;
+    object-fit: cover;
+    transition: all 0.5s;
 }
 
 .slider .project-container .image-container img:hover {
