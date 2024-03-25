@@ -322,13 +322,12 @@ textarea {
     }
 
     .hero-section .content .subtitle {
-        margin: 1.5rem 0;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     .hero-section .image-box .image-container {
-        width: 250px;
-        height: 250px;
+        width: 270px;
+        height: 270px;
     }
 }
 
