@@ -122,3 +122,13 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
+
+//  VANILLA TILT FOR SERVICES CARD
+VanillaTilt.init(document.querySelectorAll(".service-card"), {
+  max: 15,
+  speed: 1000,
+  scale: 1.05,
+  transition: true,
+  glare: true,
+  "max-glare": 0.2,
+});

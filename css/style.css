@@ -24,6 +24,8 @@ Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only
     --blue: #007bff;
     --contact-background: #f4f4f4;
     --border-color: #ccc;
+    --service-bg-color: #f3f1f6;
+    --service-img-bg-color: #EDF7FA;
 }
 
 *::selection {
@@ -469,6 +471,59 @@ textarea {
 
 .about__content-details-para:last-child {
     margin-bottom: 4rem;
+}
+
+/* SERVICE SECTION */
+
+.services {
+    background-color: var(--service-bg-color);
+}
+
+.services .service-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 6rem;
+}
+
+.services .service-container .service-card {
+    padding: 4rem;
+    background-color: var(--white);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 0 45px 0 rgba(0, 0, 0, .07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    flex: 1;
+}
+
+.services .service-container .service-card .service-image-container {
+    width: 170px;
+    height: 170px;
+    padding: 10px;
+    background: var(--service-img-bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.services .service-container .service-card .service-image-container .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.services .service-container .service-card .card-title {
+    font-size: 2.5rem;
+}
+
+.services .service-container .service-card .card-desc {
+    font-size: 2rem;
 }
 
 /* CONTACT SECTION */

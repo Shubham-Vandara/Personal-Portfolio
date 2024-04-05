@@ -97,6 +97,9 @@
               <a href="./#projects" class="header__link"> Projects </a>
             </li>
             <li class="header__link-wrapper">
+              <a href="./#services" class="header__link"> Services </a>
+            </li>
+            <li class="header__link-wrapper">
               <a href="./#contact" class="header__link"> Contact </a>
             </li>
           </ul>
@@ -127,6 +130,10 @@
 
             <li class="header__sm-menu-link">
               <a href="./#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./#projects"> Services </a>
             </li>
 
             <li class="header__sm-menu-link">
@@ -262,9 +269,8 @@
         >
           <span class="heading-sec__main">About Me</span>
           <span class="heading-sec__sub">
-            Explore detailed insights into my profile, showcasing my expertise
-            in programming and technology, encompassing a range of skills and
-            accomplishments.
+            Deep dive into my programming and tech skills! Explore my profile to
+            discover my diverse skillset and impressive accomplishments.
           </span>
         </h2>
         <div class="about__content">
@@ -351,9 +357,9 @@
         >
           <span class="heading-sec__main">Projects</span>
           <span class="heading-sec__sub">
-            Check out some cool projects I've worked on my personal projects.
-            Each one comes with its own story – providing insights into the
-            development process and outcomes.
+            Dive into my portfolio! These personal projects showcase my skills
+            and creativity. Each project tackles a unique challenge, showcasing
+            my creative problem-solving and ability to deliver results.
           </span>
         </h2>
         <section class="regular slider">
@@ -623,6 +629,73 @@
       </div>
     </section>
 
+    <!-- SERVICE SECTION -->
+
+    <section id="services" class="services sec-pad">
+      <div class="main-container">
+        <h2
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          class="heading heading-sec heading-sec__mb-med"
+        >
+          <span class="heading-sec__main">Services</span>
+          <span class="heading-sec__sub">
+            Get noticed. Get results. We build stunning websites, user-friendly
+            experiences, and data-driven marketing campaigns to launch your
+            brand to online success.
+          </span>
+        </h2>
+
+        <div class="service-container">
+          <div class="service-card">
+            <div class="service-image-container">
+              <img
+                class="image"
+                src="./assets/service-images/Web_Development.gif"
+                alt="web_development"
+              />
+            </div>
+            <h3 class="card-title">Web Development</h3>
+            <p class="card-desc">
+              From pixels to perfection. We turn your ideas into stunning
+              websites that shine, driving engagement and boosting your online
+              presence.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-image-container">
+              <img
+                class="image"
+                src="./assets/service-images/UI_UX_Design.gif"
+                alt="ui_ux_design"
+              />
+            </div>
+            <h3 class="card-title">UI UX Design</h3>
+            <p class="card-desc">
+              Designs that mesmerize. Our UI/UX experts craft seamless
+              interfaces that captivate users and keep them coming back for
+              more.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-image-container">
+              <img
+                class="image"
+                src="./assets/service-images/Digital_Marketing.gif"
+                alt="digital_marketing"
+              />
+            </div>
+            <h3 class="card-title">Digital Marketing</h3>
+            <p class="card-desc">
+              Fueling your digital journey. Our strategies ignite growth,
+              putting your brand in front of the right audience and turning
+              clicks into customers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT SECTION -->
 
     <section id="contact" class="contact sec-pad dynamicBg">
@@ -634,8 +707,9 @@
         >
           <span class="heading-sec__main heading-sec__main--lt">Contact</span>
           <span class="heading-sec__sub heading-sec__sub--lt">
-            Let's connect! Feel free to drop me a message – whether it's about a
-            potential collaboration, a project idea, or just to say hello.
+            I'd love to connect! Feel free to reach out if you have a
+            collaboration opportunity, a project you'd like to discuss, or
+            simply just to say hello.
           </span>
         </h2>
         <div class="contact-container">
@@ -821,6 +895,13 @@
     <script>
       AOS.init();
     </script>
+    <!-- VANILLA TILT CDN (FOR SERVICES CARD)  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+      integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- FORM TO GOOGLE SHEETS -->
     <!-- https://github.com/jamiewilson/form-to-google-sheets -->
     <script>
