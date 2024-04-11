@@ -751,7 +751,10 @@
                 required
               ></textarea
               ><br />
-              <button type="submit" class="btn btn--med">Submit</button>
+              <button type="submit" class="btn btn--med" id="submitBtn">
+                <span class="spinner"></span>
+                <span class="btn-text">Submit</span>
+              </button>
               <span id="submit-msg"></span>
             </form>
           </div>
@@ -894,35 +897,6 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
-    </script>
-    <!-- VANILLA TILT CDN (FOR SERVICES CARD)  -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
-      integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- FORM TO GOOGLE SHEETS -->
-    <!-- https://github.com/jamiewilson/form-to-google-sheets -->
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwmi-1gsRbIMiQlT1_bvCIZ8nvflnb0KE3N6RfUoltvCO5urOa2IQmxSnwkaw9aDRaH/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const msg = document.querySelector("#submit-msg");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            msg.style.display = "block";
-            msg.innerHTML = "Message Sent Succesfully";
-            setTimeout(function () {
-              msg.innerHTML = "";
-              msg.style.display = "none";
-            }, 5000);
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
     </script>
     <!-- EXTERNAL JS SCRIPT FILE -->
     <script src="./JS/index.js"></script>

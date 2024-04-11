@@ -123,12 +123,41 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
 
-//  VANILLA TILT FOR SERVICES CARD
-VanillaTilt.init(document.querySelectorAll(".service-card"), {
-  max: 15,
-  speed: 1000,
-  scale: 1.05,
-  transition: true,
-  glare: true,
-  "max-glare": 0.2,
+// FORM TO GOOGLE SHEETS
+// https://github.com/jamiewilson/form-to-google-sheets
+
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbwmi-1gsRbIMiQlT1_bvCIZ8nvflnb0KE3N6RfUoltvCO5urOa2IQmxSnwkaw9aDRaH/exec";
+const form = document.forms["submit-to-google-sheet"];
+const msg = document.querySelector("#submit-msg");
+const spinner = document.querySelector(".spinner");
+const btnText = document.querySelector(".btn-text");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  // Show spinner and hide button text
+  spinner.style.display = "block";
+  btnText.style.display = "none";
+
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      msg.style.display = "block";
+      msg.innerHTML = "Message Sent Successfully";
+      setTimeout(function () {
+        msg.innerHTML = "";
+        msg.style.display = "none";
+      }, 5000);
+      form.reset();
+
+      // Hide spinner and show button text after successful submission
+      spinner.style.display = "none";
+      btnText.style.display = "block";
+    })
+    .catch((error) => {
+      console.error("Error!", error.message);
+      // Hide spinner and show button text in case of error
+      spinner.style.display = "none";
+      btnText.style.display = "block";
+    });
 });

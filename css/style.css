@@ -22,6 +22,7 @@ Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only
     --black: #000;
     --green: #28a745;
     --blue: #007bff;
+    --about-background: #fafafa;
     --contact-background: #f4f4f4;
     --border-color: #ccc;
     --service-bg-color: #f3f1f6;
@@ -210,21 +211,17 @@ textarea {
     display: inline-block;
     font-weight: 700;
     border-radius: 5px;
-    /* box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15); */
     transition: all .3s;
     color: var(--white);
     background: var(--btn-bg-color);
     transition: all 0.5s;
 }
 
-@media only screen and (min-width: 1200px) {
-    .btn:hover {
-        background: var(--white);
-        color: var(--btn-bg-hover);
-        border: 1px solid var(--btn-bg-hover);
-        transform: scale(0.95);
-        /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.18), 0px 6px 6px rgba(0, 0, 0, 0.22); */
-    }
+.btn:hover {
+    background: var(--white);
+    color: var(--btn-bg-hover);
+    border: 1px solid var(--btn-bg-hover);
+    transform: scale(0.95);
 }
 
 .btn--bg {
@@ -427,7 +424,7 @@ textarea {
 /* ABOUT SECTION */
 
 .about {
-    background: #fafafa;
+    background: var(--about-background);
 }
 
 .about__content {
@@ -592,8 +589,14 @@ textarea {
     border-radius: 5px;
     box-sizing: border-box;
     border: 1px solid var(--border-color);
-    background: var(--white);
+    background: var(--about-background);
     color: var(--text-color);
+    transition: all 0.5s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: var(--white);
 }
 
 .contact-form span#submit-msg {
@@ -607,6 +610,29 @@ textarea {
     transition: all 0.5s;
 }
 
+
+.spinner {
+    border: 2px solid var(--white);
+    border-left-color: var(--blue);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+#submitBtn:hover .spinner {
+    border: 2px solid var(--blue);
+    border-left-color: var(--white);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .contact-container {
         flex-direction: column;
@@ -618,13 +644,7 @@ textarea {
         display: none;
     }
 
-    .contact-image,
-    .contact-form {
-        flex: 1 1 100%;
-        border-radius: 10px;
-    }
-
-    .contact-form input[type="submit"] {
+    .contact-form #submitBtn {
         width: 100%;
     }
 }
@@ -1087,6 +1107,14 @@ textarea {
 .slider .project-content .buttons .live-link:hover::before,
 .slider .project-content .buttons .code-link:hover::before {
     transform: translatex(0);
+}
+
+.slick-dots li button:before {
+    font-size: 20px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: var(--blue);
 }
 
 /* TYPED ANIMAION CSS */
