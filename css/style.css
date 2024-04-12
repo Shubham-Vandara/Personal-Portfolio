@@ -640,6 +640,10 @@ textarea {
         align-items: stretch;
     }
 
+    .contact-form {
+        border-radius: 10px;
+    }
+
     .contact-image {
         display: none;
     }
