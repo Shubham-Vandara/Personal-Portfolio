@@ -158,8 +158,8 @@ textarea {
     content: '';
     position: absolute;
     top: calc(100% + 1.5rem);
-    height: 5px;
-    width: 3rem;
+    height: 2px;
+    width: 10rem;
     background: var(--btn-bg-hover);
     left: 50%;
     transform: translateX(-50%);
@@ -1153,4 +1153,10 @@ textarea {
     color: var(--btn-bg-color);
     background-color: var(--white);
     scale: 0.95;
+}
+
+/* LAZY LOAD IMAGES */
+
+.lazy-img {
+    filter: blur(20px);
 }

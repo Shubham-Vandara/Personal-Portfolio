@@ -161,3 +161,34 @@ form.addEventListener("submit", (e) => {
       btnText.style.display = "block";
     });
 });
+// LAZY LOAD IMAGES
+
+// Select all images with a data-src attribute
+const imageTargets = document.querySelectorAll("img[data-src]");
+
+// Function to handle lazy loading of images
+const loadImg = function (entries, observer) {
+  // Loop through each entry
+  entries.forEach((entry) => {
+    // If the entry is not intersecting with the viewport, return
+    if (!entry.isIntersecting) return;
+    // Replace the src attribute with the data-src attribute to load the image
+    entry.target.src = entry.target.dataset.src;
+    // Once the image is loaded, remove the lazy-img class
+    entry.target.addEventListener("load", function () {
+      entry.target.classList.remove("lazy-img");
+    });
+    // Stop observing the image after it's loaded to prevent unnecessary intersection checks
+    observer.unobserve(entry.target);
+  });
+};
+
+// Create an IntersectionObserver to monitor when images enter the viewport
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null, // Use the viewport as the root
+  threshold: 0, // Trigger the intersection event when any part of the image enters the viewport
+  rootMargin: "-200px", // Add a negative margin to trigger the intersection event earlier
+});
+
+// Observe each image to lazy load them
+imageTargets.forEach((img) => imgObserver.observe(img));
