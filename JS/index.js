@@ -183,11 +183,11 @@ const loadImg = function (entries, observer) {
   });
 };
 
-// Create an IntersectionObserver to monitor when images enter the viewport
+// Initialize an IntersectionObserver to asynchronously load images when they enter the viewport.
 const imgObserver = new IntersectionObserver(loadImg, {
-  root: null, // Use the viewport as the root
-  threshold: 0, // Trigger the intersection event when any part of the image enters the viewport
-  rootMargin: "-200px", // Add a negative margin to trigger the intersection event earlier
+  root: null, // Use the viewport as the root element for intersection checking.
+  threshold: 0, // Trigger the intersection event when any part of the image enters the viewport.
+  rootMargin: "0px", // No additional margin around the viewport to trigger intersection, ensuring the entire image is visible.
 });
 
 // Observe each image to lazy load them
