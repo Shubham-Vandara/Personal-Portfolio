@@ -221,7 +221,6 @@ textarea {
     background: var(--white);
     color: var(--btn-bg-hover);
     border: 1px solid var(--btn-bg-hover);
-    transform: scale(0.95);
 }
 
 .btn--bg {
@@ -263,6 +262,12 @@ textarea {
 }
 
 /* HOME SECTION */
+
+/* FONT AWESOME STYLE */
+.fa-2xl,
+.fa-xl {
+    color: var(--white);
+}
 
 .hero-section {
     display: flex;
@@ -392,10 +397,13 @@ textarea {
 
 .home-hero__social-icon-link {
     width: 100%;
-    display: block;
-    padding: 1.2rem;
+    padding: 2.5rem;
+    font-size: 1.4rem;
     border-bottom: 2px solid var(--border-color);
     transition: background .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-hero__social-icon-link:hover {
@@ -735,8 +743,25 @@ textarea {
     transition: color .3s;
 }
 
-.header__link:hover {
-    color: var(--btn-bg-hover);
+/* HEADER NAV LINK STROKE STYLE */
+.header__main.stroke ul li a {
+    position: relative;
+}
+
+.header__main.stroke ul li a:after {
+    content: '.';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    color: transparent;
+    background: var(--btn-bg-color);
+    height: 2px;
+    transition: all 0.5s;
+}
+
+.header__main.stroke ul li a:hover:after {
+    width: 100%;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -871,27 +896,32 @@ textarea {
 
 .main-footer__social-cont {
     margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .main-footer__social-cont .footer-icon {
-    display: inline-flex;
-    padding: 10px;
+    padding: 1.2rem;
+    font-size: 1.8rem;
     background: var(--btn-bg-color);
-    align-items: center;
     border-radius: 5px;
-    margin: 0px 10px 10px 0;
+    transition: all 0.5s;
+}
+
+.main-footer__social-cont .footer-icon .fa-brands {
     transition: all 0.5s;
 }
 
 @media only screen and (min-width: 1200px) {
     .main-footer__social-cont .footer-icon:hover {
-        background-color: var(--btn-bg-hover);
-        scale: 0.95;
+        background: var(--white);
+        border: 1px solid var(--btn-bg-hover);
     }
-}
 
-.main-footer__icon {
-    width: 2.5rem;
+    .main-footer__social-cont .footer-icon:hover .fa-brands {
+        color: var(--btn-bg-hover);
+    }
 }
 
 
@@ -1133,7 +1163,7 @@ textarea {
 
 /* UP ARROW DESIGN */
 
-.material-symbols-rounded {
+#up-arrow {
     background-color: var(--btn-bg-color);
     color: var(--white);
     font-size: 30px;
@@ -1149,10 +1179,9 @@ textarea {
     border: 1px solid var(--btn-bg-color);
 }
 
-.material-symbols-rounded:hover {
+#up-arrow:hover {
     color: var(--btn-bg-color);
     background-color: var(--white);
-    scale: 0.95;
 }
 
 /* LAZY LOAD IMAGES */
