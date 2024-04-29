@@ -1045,14 +1045,14 @@ textarea {
 
 .slider .project-container .image-container {
     overflow: hidden;
-    height: 250px;
-    width: 100%;
+    aspect-ratio: 3/2;
 }
 
 .slider .project-container .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: all 0.5s;
 }
 

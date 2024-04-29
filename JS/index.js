@@ -127,7 +127,7 @@ function topFunction() {
 // https://github.com/jamiewilson/form-to-google-sheets
 
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbwmi-1gsRbIMiQlT1_bvCIZ8nvflnb0KE3N6RfUoltvCO5urOa2IQmxSnwkaw9aDRaH/exec";
+  "https://script.google.com/macros/s/AKfycbzO5v5udcE894vANVtvOQtzo8XVeUIjnMKRgqkILNW-F6JNe4YPiTfiiESENWZk8fug/exec";
 const form = document.forms["submit-to-google-sheet"];
 const msg = document.querySelector("#submit-msg");
 const spinner = document.querySelector(".spinner");
