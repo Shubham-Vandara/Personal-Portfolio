@@ -3,11 +3,11 @@ This repository contains the source code for my portfolio website, showcasing my
 
 ## Features
 
-- **Home Page**: A brief introduction to the website.
+- **Home Section**: A brief introduction to the website.
 - **About Me Section**: Information about yourself, including skills and experience.
 - **Projects Section**: A card carousel displaying project details, including live links and code links for each project.
 - **Services Section**: Description of the services offered, including any specific expertise or offerings.
-- **Contact Page**: A form to send messages or inquiries.
+- **Contact Section**: A form to send messages or inquiries.
 
 ### Technologies Used
 - HTML
@@ -21,4 +21,8 @@ This repository contains the source code for my portfolio website, showcasing my
 Clone the repository
 
  ```bash
-   git clone https://github.com/Shubham-Vandara/Personal-Portfolio.git
+   git clone https://github.com/shubham-vandara/personal-portfolio.git
+```
+## Project Link
+
+[Personal Portfolio](https://shubham-vandara.github.io/personal-portfolio/)
