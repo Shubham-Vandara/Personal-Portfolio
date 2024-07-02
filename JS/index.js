@@ -40,12 +40,12 @@ headerLogoConatiner.addEventListener("click", () => {
 $(document).on("ready", function () {
   $(".regular").slick({
     dots: true,
-    infinite: true,
+    infinite: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
-    // autoplay: true,
-    // autoplaySpeed: 1500,
+    autoplay: true,
+    autoplaySpeed: 1500,
     responsive: [
       {
         breakpoint: 800,
